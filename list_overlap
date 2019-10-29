@@ -1,0 +1,18 @@
+# take two lists of numbers and print a list of their overlapping numbers
+
+# get inputs of two lists
+import sys
+lines = sys.stdin.readlines()
+newlines = []
+for line in lines:
+    newlines.append(line.rstrip())
+list1, list2 = newlines
+newlist1 = list1.split()
+newlist2 = list2.split()
+
+# print list of overlap
+overlap = []
+for i in range(len(newlist1)):
+    if newlist1[i] in newlist2:
+        overlap.append(newlist1[i])
+print(overlap)
